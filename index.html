@@ -5,7 +5,15 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Anon Thời Trang Nam - Nữ</title>
     <link rel="stylesheet" href="style.css" />
-
+    <link
+      rel="shortcut icon"
+      href="https://i.postimg.cc/R07Wy2gJ/favicon.png"
+      type="image/x-icon"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
     <link
       rel="shortcut icon"
       href="https://i.postimg.cc/R07Wy2gJ/favicon.png"
@@ -13,6 +21,188 @@
     />
   </head>
   <body>
+    <div class="auth-modal" id="authModal">
+      <div class="auth-container">
+        <div class="auth-close-btn" id="authCloseBtn">
+          <ion-icon name="close-outline"></ion-icon>
+        </div>
+
+        <div class="auth-forms">
+          <div class="auth-tabs">
+            <div class="auth-tab active" data-tab="login">Đăng Nhập</div>
+            <div class="auth-tab" data-tab="register">Đăng Ký</div>
+          </div>
+          <div class="auth-form active" id="loginForm">
+            <div class="auth-header">
+              <h2>Chào Mừng Trở Lại</h2>
+              <p>Đăng nhập để trải nghiệm mua sắm tốt hơn</p>
+            </div>
+
+            <div class="social-login">
+              <button class="social-btn facebook">
+                <ion-icon name="logo-facebook"></ion-icon>
+                <span>Facebook</span>
+              </button>
+              <button class="social-btn google">
+                <ion-icon name="logo-google"></ion-icon>
+                <span>Google</span>
+              </button>
+            </div>
+
+            <div class="divider">
+              <span>hoặc đăng nhập với email</span>
+            </div>
+
+            <form action="#" class="auth-input-form">
+              <div class="form-group">
+                <div class="input-icon">
+                  <ion-icon name="mail-outline"></ion-icon>
+                </div>
+                <input type="email" placeholder="Email" required />
+              </div>
+
+              <div class="form-group">
+                <div class="input-icon">
+                  <ion-icon name="lock-closed-outline"></ion-icon>
+                </div>
+                <input type="password" placeholder="Mật khẩu" required />
+                <div class="toggle-password">
+                  <ion-icon name="eye-outline" class="show-pwd"></ion-icon>
+                  <ion-icon name="eye-off-outline" class="hide-pwd"></ion-icon>
+                </div>
+              </div>
+
+              <div class="form-options">
+                <label class="remember-me">
+                  <input type="checkbox" />
+                  <span class="checkmark"></span>
+                  Ghi nhớ đăng nhập
+                </label>
+                <a href="#" class="forgot-password">Quên mật khẩu?</a>
+              </div>
+
+              <button type="submit" class="auth-btn">Đăng Nhập</button>
+            </form>
+          </div>
+          <div class="auth-form" id="registerForm">
+            <div class="auth-header">
+              <h2>Tạo Tài Khoản Mới</h2>
+              <p>Đăng ký để nhận nhiều ưu đãi hấp dẫn</p>
+            </div>
+
+            <div class="social-login">
+              <button class="social-btn facebook">
+                <ion-icon name="logo-facebook"></ion-icon>
+                <span>Facebook</span>
+              </button>
+              <button class="social-btn google">
+                <ion-icon name="logo-google"></ion-icon>
+                <span>Google</span>
+              </button>
+            </div>
+
+            <div class="divider">
+              <span>hoặc đăng ký với email</span>
+            </div>
+
+            <form action="#" class="auth-input-form">
+              <div class="form-group">
+                <div class="input-icon">
+                  <ion-icon name="person-outline"></ion-icon>
+                </div>
+                <input type="text" placeholder="Họ và tên" required />
+              </div>
+
+              <div class="form-group">
+                <div class="input-icon">
+                  <ion-icon name="mail-outline"></ion-icon>
+                </div>
+                <input type="email" placeholder="Email" required />
+              </div>
+
+              <div class="form-group">
+                <div class="input-icon">
+                  <ion-icon name="call-outline"></ion-icon>
+                </div>
+                <input type="tel" placeholder="Số điện thoại" required />
+              </div>
+
+              <div class="form-group">
+                <div class="input-icon">
+                  <ion-icon name="lock-closed-outline"></ion-icon>
+                </div>
+                <input type="password" placeholder="Mật khẩu" required />
+                <div class="toggle-password">
+                  <ion-icon name="eye-outline" class="show-pwd"></ion-icon>
+                  <ion-icon name="eye-off-outline" class="hide-pwd"></ion-icon>
+                </div>
+              </div>
+
+              <div class="form-group">
+                <div class="input-icon">
+                  <ion-icon name="lock-closed-outline"></ion-icon>
+                </div>
+                <input
+                  type="password"
+                  placeholder="Xác nhận mật khẩu"
+                  required
+                />
+              </div>
+
+              <div class="form-options">
+                <label class="remember-me">
+                  <input type="checkbox" required />
+                  <span class="checkmark"></span>
+                  Tôi đồng ý với <a href="#">Điều khoản</a> và
+                  <a href="#">Chính sách</a>
+                </label>
+              </div>
+
+              <button type="submit" class="auth-btn">Đăng Ký</button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="cart-modal" id="cartModal">
+      <div class="cart-container">
+        <div class="cart-header">
+          <h2>Giỏ Hàng Của Tôi</h2>
+          <div class="cart-close-btn" id="cartCloseBtn">
+            <ion-icon name="close-outline"></ion-icon>
+          </div>
+        </div>
+
+        <div class="cart-empty" id="cartEmpty">
+          <img
+            src="https://i.postimg.cc/5yt0yZ0R/bag.png"
+            alt="Giỏ hàng trống"
+            width="100"
+          />
+          <p>Giỏ hàng của bạn đang trống</p>
+          <button class="continue-shopping-btn" id="continueShoppingBtn">
+            Tiếp Tục Mua Sắm
+          </button>
+        </div>
+
+        <div class="cart-items-container" id="cartItemsContainer">
+          <!-- Danh sách sản phẩm trong giỏ hàng sẽ được thêm vào đây bằng JavaScript -->
+        </div>
+
+        <div class="cart-footer" id="cartFooter">
+          <div class="cart-total">
+            <span>Tổng cộng:</span>
+            <span class="total-price" id="cartTotal">$0.00</span>
+          </div>
+
+          <div class="cart-actions">
+            <button class="view-cart-btn">Xem Giỏ Hàng</button>
+            <button class="checkout-btn">Thanh Toán</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
     <div class="overlay" data-overlay></div>
 
     <div class="modal" data-modal>
@@ -56,7 +246,6 @@
         </div>
       </div>
     </div>
-
     <div class="notification-toast" data-toast>
       <button class="toast-close-btn" data-toast-close>
         <ion-icon name="close-outline"></ion-icon>
@@ -75,6 +264,108 @@
         <p class="toast-message">Ai đó vừa mua sản phẩm này</p>
         <p class="toast-title">Bông Tai Giọt Vàng Đại Dương</p>
         <p class="toast-meta"><time datetime="PT2M">2 Phút</time> trước</p>
+      </div>
+    </div>
+    <div class="notification-toast" data-toast>
+      <button class="toast-close-btn" data-toast-close>
+        <ion-icon name="close-outline"></ion-icon>
+      </button>
+
+      <div class="toast-banner">
+        <img
+          src="https://i.postimg.cc/JnMtkwB5/shoe-1.jpg"
+          alt="Giày Da Công Sở Nam"
+          width="80"
+          height="70"
+        />
+      </div>
+
+      <div class="toast-detail">
+        <p class="toast-message">Khách hàng ở Hà Nội vừa đặt</p>
+        <p class="toast-title">Giày Da Công Sở Nam</p>
+        <p class="toast-meta"><time datetime="PT5M">5 Phút</time> trước</p>
+      </div>
+    </div>
+    <div class="notification-toast" data-toast>
+      <button class="toast-close-btn" data-toast-close>
+        <ion-icon name="close-outline"></ion-icon>
+      </button>
+
+      <div class="toast-banner">
+        <img
+          src="https://i.postimg.cc/9fnSKNRh/jacket-1.jpg"
+          alt="Áo Khoác Da Nam Mùa Đông"
+          width="80"
+          height="70"
+        />
+      </div>
+
+      <div class="toast-detail">
+        <p class="toast-message">Sản phẩm bán chạy nhất hôm nay</p>
+        <p class="toast-title">Áo Khoác Da Nam Mùa Đông</p>
+        <p class="toast-meta"><time datetime="PT10M">10 Phút</time> trước</p>
+      </div>
+    </div>
+    <div class="notification-toast" data-toast>
+      <button class="toast-close-btn" data-toast-close>
+        <ion-icon name="close-outline"></ion-icon>
+      </button>
+
+      <div class="toast-banner">
+        <img
+          src="https://i.postimg.cc/R0Kv9Jtq/perfume.jpg"
+          alt="Nước Hoa Nữ Signature"
+          width="80"
+          height="70"
+        />
+      </div>
+
+      <div class="toast-detail">
+        <p class="toast-message">Khách hàng ở TP.HCM vừa mua</p>
+        <p class="toast-title">Nước Hoa Nữ Signature</p>
+        <p class="toast-meta"><time datetime="PT3M">3 Phút</time> trước</p>
+      </div>
+    </div>
+
+    <div class="notification-toast" data-toast>
+      <button class="toast-close-btn" data-toast-close>
+        <ion-icon name="close-outline"></ion-icon>
+      </button>
+
+      <div class="toast-banner">
+        <img
+          src="https://images.unsplash.com/photo-1584917865442-de89df76afd3"
+          alt="Túi Xách Da Thật Nữ Elegance"
+          width="80"
+          height="70"
+        />
+      </div>
+
+      <div class="toast-detail">
+        <p class="toast-message">Còn 5 sản phẩm cuối cùng</p>
+        <p class="toast-title">Túi Xách Da Thật Nữ Elegance</p>
+        <p class="toast-meta"><time datetime="PT1M">1 Phút</time> trước</p>
+      </div>
+    </div>
+
+    <div class="notification-toast" data-toast>
+      <button class="toast-close-btn" data-toast-close>
+        <ion-icon name="close-outline"></ion-icon>
+      </button>
+
+      <div class="toast-banner">
+        <img
+          src="https://i.postimg.cc/rsk1gH6g/watch-1.jpg"
+          alt="Đồng Hồ Thông Minh Vital Plus"
+          width="80"
+          height="70"
+        />
+      </div>
+
+      <div class="toast-detail">
+        <p class="toast-message">Ưu đãi giảm giá 30% sắp kết thúc</p>
+        <p class="toast-title">Đồng Hồ Thông Minh Vital Plus</p>
+        <p class="toast-meta"><time datetime="PT15M">15 Phút</time> trước</p>
       </div>
     </div>
 
@@ -544,50 +835,123 @@
       <div class="banner">
         <div class="container">
           <div class="slider-container has-scrollbar">
+            <!-- Banner 1 -->
             <div class="slider-item">
               <img
-                src="https://i.postimg.cc/V6Rrdsk1/banner-1.jpg"
-                alt="khuyến mãi thời trang nữ mới nhất"
+                src="../Summer_2025_fashion_collection_banner_without_text-1740837519467.png"
+                alt="Bộ sưu tập mùa hè 2025"
                 class="banner-img"
               />
 
               <div class="banner-content">
-                <p class="banner-subtitle">Sản Phẩm Thịnh Hành</p>
-                <h2 class="banner-title">Khuyến mãi thời trang nữ mới nhất</h2>
-                <p class="banner-text">Bắt đầu từ &dollar; <b>20</b>.00</p>
-                <a href="#" class="banner-btn">Mua Ngay</a>
+                <p class="banner-subtitle">Bộ Sưu Tập Mới</p>
+                <h2 class="banner-title">Thời Trang Mùa Hè 2025</h2>
+                <p class="banner-text">Giảm đến <b>30%</b> cho đơn từ 500K</p>
+                <a href="#" class="banner-btn">Xem Ngay</a>
               </div>
             </div>
 
+            <!-- Banner 2 -->
             <div class="slider-item">
               <img
-                src="https://i.postimg.cc/RFXhvPgZ/banner-2.jpg"
-                alt="kính mát hiện đại"
+                src="../Handbags_Accessories_Summer_2025_fashion_collect-1740837419518.png"
+                alt="Phụ kiện cao cấp"
                 class="banner-img"
               />
 
               <div class="banner-content">
-                <p class="banner-subtitle">Phụ Kiện Thịnh Hành</p>
-                <h2 class="banner-title">Kính Mát Hiện Đại</h2>
-                <p class="banner-text">Bắt đầu từ &dollar; <b>15</b>.00</p>
+                <p class="banner-subtitle">Phụ Kiện Cao Cấp</p>
+                <h2 class="banner-title">Túi Xách & Phụ Kiện</h2>
+                <p class="banner-text">Chỉ từ <b>199K</b></p>
                 <a href="#" class="banner-btn">Mua Ngay</a>
               </div>
             </div>
 
+            <!-- Banner 3 -->
             <div class="slider-item">
               <img
-                src="https://i.postimg.cc/MTKZ37z2/banner-3.jpg"
-                alt="khuyến mãi thời trang mùa hè mới"
+                src="https://cdn1.genspark.ai/user-upload-image/6_generated/c4ad52d8-4e82-4976-b43b-62d13f80f36c"
+                alt="Flash Sale cuối tuần"
                 class="banner-img"
               />
 
               <div class="banner-content">
-                <p class="banner-subtitle">Ưu Đãi Giảm Giá</p>
-                <h2 class="banner-title">Khuyến Mãi Thời Trang Mùa Hè Mới</h2>
-                <p class="banner-text">Bắt đầu từ &dollar; <b>29</b>.99</p>
-                <a href="#" class="banner-btn">Mua Ngay</a>
+                <p class="banner-subtitle">Flash Sale Cuối Tuần</p>
+                <h2 class="banner-title">Giảm Đến 50% Toàn Bộ Sản Phẩm</h2>
+                <p class="banner-text">
+                  Thời gian có hạn - <b>Nhanh tay mua ngay</b>
+                </p>
+                <a href="#" class="banner-btn">Săn Sale</a>
               </div>
             </div>
+
+            <!-- Banner 4 (Mới) -->
+            <div class="slider-item">
+              <img
+                src="https://images.unsplash.com/photo-1441984904996-e0b6ba687e04?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80"
+                alt="Hàng mới về tháng 3"
+                class="banner-img"
+              />
+
+              <div class="banner-content">
+                <p class="banner-subtitle">Hàng Mới Về</p>
+                <h2 class="banner-title">Bộ Sưu Tập Xuân 2025</h2>
+                <p class="banner-text">
+                  Ưu đãi <b>mua 2 tặng 1</b> cho khách hàng mới
+                </p>
+                <a href="#" class="banner-btn">Khám Phá</a>
+              </div>
+            </div>
+
+            <!-- Banner 5 (Mới) -->
+            <div class="slider-item">
+              <img
+                src="https://images.unsplash.com/photo-1490481651871-ab68de25d43d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80"
+                alt="Bộ sưu tập cao cấp"
+                class="banner-img"
+              />
+
+              <div class="banner-content">
+                <p class="banner-subtitle">Dòng Sản Phẩm Cao Cấp</p>
+                <h2 class="banner-title">Thời Trang Dạ Tiệc</h2>
+                <p class="banner-text">
+                  Giảm <b>15%</b> khi thanh toán qua ví điện tử
+                </p>
+                <a href="#" class="banner-btn">Mua Sắm Ngay</a>
+              </div>
+            </div>
+
+            <!-- Banner 6 (Mới) -->
+            <div class="slider-item">
+              <img
+                src="https://images.unsplash.com/photo-1445205170230-053b83016050?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1171&q=80"
+                alt="Thời trang bền vững"
+                class="banner-img"
+              />
+
+              <div class="banner-content">
+                <p class="banner-subtitle">Thời Trang Bền Vững</p>
+                <h2 class="banner-title">Thân Thiện Với Môi Trường</h2>
+                <p class="banner-text">
+                  Tặng <b>túi vải</b> cho đơn hàng từ 300K
+                </p>
+                <a href="#" class="banner-btn">Tìm Hiểu Thêm</a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Nút điều hướng slider (cho desktop) -->
+          <div class="slider-nav-btn prev">&#10094;</div>
+          <div class="slider-nav-btn next">&#10095;</div>
+
+          <!-- Chỉ số slider -->
+          <div class="slider-indicators">
+            <span class="slider-indicator active"></span>
+            <span class="slider-indicator"></span>
+            <span class="slider-indicator"></span>
+            <span class="slider-indicator"></span>
+            <span class="slider-indicator"></span>
+            <span class="slider-indicator"></span>
           </div>
         </div>
       </div>
@@ -1164,8 +1528,8 @@
                   <div class="showcase">
                     <a href="#" class="showcase-img-box">
                       <img
-                        src="https://i.postimg.cc/kGZn4GL2/1.jpg"
-                        alt="giày vải cho bé"
+                        src="https://bizweb.dktcdn.net/thumb/1024x1024/100/468/275/products/025142-18d8366f-29c9-4b55-9f76-9530e7c163ec.jpg?v=1672832412007"
+                        alt="trang sức"
                         class="showcase-img"
                         width="75"
                         height="75"
@@ -1174,7 +1538,7 @@
 
                     <div class="showcase-content">
                       <a href="#"
-                        ><h4 class="showcase-title">Giày vải cho bé</h4></a
+                        ><Trang class="showcase-title">ESME ES092</h4></a
                       >
 
                       <div class="showcase-rating">
@@ -1186,17 +1550,48 @@
                       </div>
 
                       <div class="price-box">
-                        <del>$5.00</del>
-                        <p class="price">$4.00</p>
+                        <del>$94.62</del>
+                        <p class="price">$85.27</p>
                       </div>
                     </div>
                   </div>
+                  <div class="showcase-wrapper">
+                    <div class="showcase-container">
+                      <div class="showcase">
+                        <a href="#" class="showcase-img-box">
+                          <img
+                            src="https://product.hstatic.net/200000561331/product/i-060390-leau-papier-edt-100ml-1-940_634a2139a7884a9c95f31b35daef2b44_master.jpeg"
+                            alt="Nước hoa Diptyque L'Eau Papier – Sis Scents"
+                            width="75"
+                            height="75"
+                          />
+                        </a>
+                        <div class="showcase-content">
+                          <a href="#"
+                            ><h4 class="showcase-title">Nước hoa Nam</h4></a
+                          >
 
+                          <div class="showcase-rating">
+                            <ion-icon name="star"></ion-icon>
+                            <ion-icon name="star"></ion-icon>
+                            <ion-icon name="star"></ion-icon>
+                            <ion-icon name="star"></ion-icon>
+                            <ion-icon name="star"></ion-icon>
+                          </div>
+
+                          <div class="price-box">
+                            <del>$36.20</del>
+                            <p class="price">$25.10</p>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
                   <div class="showcase">
                     <a href="#" class="showcase-img-box">
                       <img
-                        src="https://i.postimg.cc/fySG8Kgb/2.jpg"
-                        alt="áo hoodie nam"
+                        src="https://sspark.ai/cfimages?u1=BYK5NOKyUBkRrVQzdbx3x9GJRKwvn89p%2BiVbekn3kcOtOC4598BDxUWlhCGmPkUeuepLLIlpydPonE%2FVNKLDV6aaZGRw2%2Fd9tbHByN7hFTtxzBqYxMBJ4uMezdtcJd%2FVEPAvQBzmkYhHS9Kjo4Yn7PPF6hbWZG4LqS%2FKcxzlzJjZ8eZGDlg%3D&u2=xwYrikmmVsPXIyzy&width=512"
+                        alt="áo gile"
                         class="showcase-img"
                         width="75"
                         height="75"
@@ -1205,7 +1600,7 @@
 
                     <div class="showcase-content">
                       <a href="#"
-                        ><h4 class="showcase-title">Áo hoodie nam</h4></a
+                        ><h4 class="showcase-title">Áo gile denim</h4></a
                       >
 
                       <div class="showcase-rating">
@@ -1217,8 +1612,8 @@
                       </div>
 
                       <div class="price-box">
-                        <del>$17.00</del>
-                        <p class="price">$7.00</p>
+                        <del>$54.00</del>
+                        <p class="price">$42.00</p>
                       </div>
                     </div>
                   </div>
@@ -1226,8 +1621,8 @@
                   <div class="showcase">
                     <a href="#" class="showcase-img-box">
                       <img
-                        src="https://i.postimg.cc/14xL2qLr/3.jpg"
-                        alt="áo thun nữ"
+                        src="https://sakurafashion.vn/upload/sanpham/large/1089330355-ao-khoac-blazer-nu-3.jpg"
+                        alt="áo nữ"
                         class="showcase-img"
                         width="75"
                         height="75"
@@ -1235,7 +1630,7 @@
                     </a>
 
                     <div class="showcase-content">
-                      <a href="#"><h4 class="showcase-title">Áo thun nữ</h4></a>
+                      <a href="#"><h4 class="showcase-title">Áo khoác blazer</h4></a>
 
                       <div class="showcase-rating">
                         <ion-icon name="star"></ion-icon>
@@ -1246,8 +1641,8 @@
                       </div>
 
                       <div class="price-box">
-                        <del>$5.00</del>
-                        <p class="price">$3.00</p>
+                        <del>$32.00</del>
+                        <p class="price">$27.00</p>
                       </div>
                     </div>
                   </div>
@@ -1255,8 +1650,8 @@
                   <div class="showcase">
                     <a href="#" class="showcase-img-box">
                       <img
-                        src="https://i.postimg.cc/y6wxsrKv/4.jpg"
-                        alt="mũ len nam"
+                        src="https://toplist.vn/images/800px/estee-lauder-321903.jpg"
+                        alt="mỹ phẩm"
                         class="showcase-img"
                         width="75"
                         height="75"
@@ -1264,7 +1659,7 @@
                     </a>
 
                     <div class="showcase-content">
-                      <a href="#"><h4 class="showcase-title">Mũ len nam</h4></a>
+                      <a href="#"><h4 class="showcase-title">Estée Lauder</h4></a>
 
                       <div class="showcase-rating">
                         <ion-icon name="star"></ion-icon>
@@ -1275,8 +1670,8 @@
                       </div>
 
                       <div class="price-box">
-                        <del>$15.00</del>
-                        <p class="price">$12.00</p>
+                        <del>$72.86</del>
+                        <p class="price">$65.39</p>
                       </div>
                     </div>
                   </div>
@@ -1917,12 +2312,13 @@
               <h2 class="title">Ưu Đãi Trong Ngày</h2>
 
               <div class="showcase-wrapper has-scrollbar">
+                <!-- Sản phẩm 1 -->
                 <div class="showcase-container">
                   <div class="showcase">
                     <div class="showcase-banner">
                       <img
-                        src="https://i.postimg.cc/wjGDnM81/shampoo.jpg"
-                        alt="bộ dầu gội, xả & sữa rửa mặt"
+                        src="https://classic.vn/wp-content/uploads/2023/10/variant_images-color-fragranceoriginale-ambermagnoliawoods-7290113146600-1.webp"
+                        alt="Bộ chăm sóc da nam giới toàn diện"
                         class="showcase-img"
                       />
                     </div>
@@ -1932,33 +2328,33 @@
                         <ion-icon name="star"></ion-icon>
                         <ion-icon name="star"></ion-icon>
                         <ion-icon name="star"></ion-icon>
-                        <ion-icon name="star-outline"></ion-icon>
-                        <ion-icon name="star-outline"></ion-icon>
+                        <ion-icon name="star"></ion-icon>
+                        <ion-icon name="star-half-outline"></ion-icon>
                       </div>
 
                       <a href="#"
                         ><h3 class="showcase-title">
-                          BỘ DẦU GỘI, XẢ & SỮA RỬA MẶT
+                          BỘ CHĂM SÓC DA NAM GIỚI TOÀN DIỆN
                         </h3></a
                       >
                       <p class="showcase-desc">
-                        Old Spice bao gồm nhiều sản phẩm được thiết kế cho nhu
-                        cầu chăm sóc nam giới, như khử mùi và chống mồ hôi, sữa
-                        tắm, kem cạo râu, nước dưỡng sau cạo râu và chăm sóc tóc
-                        và râu
+                        Bộ sản phẩm chăm sóc da cao cấp dành riêng cho nam giới,
+                        bao gồm sữa rửa mặt than hoạt tính, kem dưỡng ẩm chống
+                        nắng và serum phục hồi da. Công thức không chứa cồn, phù
+                        hợp với mọi loại da.
                       </p>
 
                       <div class="price-box">
-                        <p class="price">$150.00</p>
-                        <del>$200.00</del>
+                        <p class="price">$89.00</p>
+                        <del>$125.00</del>
                       </div>
 
                       <button class="add-cart-btn">Thêm Vào Giỏ Hàng</button>
 
                       <div class="showcase-status">
                         <div class="wrapper">
-                          <p>Đã Bán: <b>20</b></p>
-                          <p>Còn Lại: <b>40</b></p>
+                          <p>Đã Bán: <b>378</b></p>
+                          <p>Còn Lại: <b>122</b></p>
                         </div>
 
                         <div class="showcase-status-bar"></div>
@@ -1971,22 +2367,22 @@
 
                         <div class="countdown">
                           <div class="countdown-content">
-                            <p class="display-number">360</p>
+                            <p class="display-number">02</p>
                             <p class="display-text">Ngày</p>
                           </div>
 
                           <div class="countdown-content">
-                            <p class="display-number">24</p>
+                            <p class="display-number">12</p>
                             <p class="display-text">Giờ</p>
                           </div>
 
                           <div class="countdown-content">
-                            <p class="display-number">59</p>
+                            <p class="display-number">45</p>
                             <p class="display-text">Phút</p>
                           </div>
 
                           <div class="countdown-content">
-                            <p class="display-number">00</p>
+                            <p class="display-number">30</p>
                             <p class="display-text">Giây</p>
                           </div>
                         </div>
@@ -1995,12 +2391,13 @@
                   </div>
                 </div>
 
+                <!-- Sản phẩm 2 -->
                 <div class="showcase-container">
                   <div class="showcase">
                     <div class="showcase-banner">
                       <img
-                        src="https://i.postimg.cc/6qd3mpCv/jewellery-1.jpg"
-                        alt="bông tai kim cương vàng hồng"
+                        src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS-wPTsjl87MPCc9PvyOVGlA8AJCNWkjTFVxw&s"
+                        alt="Vòng tay thông minh theo dõi sức khỏe"
                         class="showcase-img"
                       />
                     </div>
@@ -2010,34 +2407,33 @@
                         <ion-icon name="star"></ion-icon>
                         <ion-icon name="star"></ion-icon>
                         <ion-icon name="star"></ion-icon>
-                        <ion-icon name="star-outline"></ion-icon>
+                        <ion-icon name="star"></ion-icon>
                         <ion-icon name="star-outline"></ion-icon>
                       </div>
 
                       <a href="#"
                         ><h3 class="showcase-title">
-                          BÔNG TAI KIM CƯƠNG VÀNG HỒNG
+                          VÒNG TAY THÔNG MINH HEALTHTRACK PRO
                         </h3></a
                       >
                       <p class="showcase-desc">
-                        Đây là một món trang sức sang trọng kết hợp giữa tông
-                        màu ấm áp của vàng hồng với sự lấp lánh của kim cương.
-                        Tận hưởng một phụ kiện sang trọng và thanh lịch, hoàn
-                        hảo để làm nổi bật bất kỳ trang phục nào và tạo thêm nét
-                        tinh tế
+                        Vòng tay thông minh thế hệ mới với cảm biến đo nhịp tim,
+                        nồng độ oxy trong máu và chất lượng giấc ngủ. Pin sử
+                        dụng được 14 ngày, chống nước 50m, màn hình AMOLED siêu
+                        sắc nét.
                       </p>
 
                       <div class="price-box">
-                        <p class="price">$1990.00</p>
-                        <del>$2000.00</del>
+                        <p class="price">$79.00</p>
+                        <del>$129.00</del>
                       </div>
 
                       <button class="add-cart-btn">Thêm Vào Giỏ Hàng</button>
 
                       <div class="showcase-status">
                         <div class="wrapper">
-                          <p>Đã Bán: <b>15</b></p>
-                          <p>Còn Lại: <b>40</b></p>
+                          <p>Đã Bán: <b>952</b></p>
+                          <p>Còn Lại: <b>48</b></p>
                         </div>
 
                         <div class="showcase-status-bar"></div>
@@ -2050,12 +2446,407 @@
 
                         <div class="countdown">
                           <div class="countdown-content">
-                            <p class="display-number">360</p>
+                            <p class="display-number">01</p>
                             <p class="display-text">Ngày</p>
                           </div>
 
                           <div class="countdown-content">
-                            <p class="display-number">24</p>
+                            <p class="display-number">08</p>
+                            <p class="display-text">Giờ</p>
+                          </div>
+
+                          <div class="countdown-content">
+                            <p class="display-number">20</p>
+                            <p class="display-text">Phút</p>
+                          </div>
+
+                          <div class="countdown-content">
+                            <p class="display-number">45</p>
+                            <p class="display-text">Giây</p>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- Sản phẩm 3 -->
+                <div class="showcase-container">
+                  <div class="showcase">
+                    <div class="showcase-banner">
+                      <img
+                        src="https://images.unsplash.com/photo-1491637639811-60e2756cc1c7"
+                        alt="Balo laptop chống trộm"
+                        class="showcase-img"
+                      />
+                    </div>
+
+                    <div class="showcase-content">
+                      <div class="showcase-rating">
+                        <ion-icon name="star"></ion-icon>
+                        <ion-icon name="star"></ion-icon>
+                        <ion-icon name="star"></ion-icon>
+                        <ion-icon name="star"></ion-icon>
+                        <ion-icon name="star"></ion-icon>
+                      </div>
+
+                      <a href="#"
+                        ><h3 class="showcase-title">
+                          BALO LAPTOP CHỐNG TRỘM TECHSAFE
+                        </h3></a
+                      >
+                      <p class="showcase-desc">
+                        Balo công nghệ cao với hệ thống khóa vân tay, cổng sạc
+                        USB tích hợp và ngăn laptop chống sốc. Chất liệu chống
+                        thấm nước, kháng UV và chống xước. Thiết kế thời trang
+                        phù hợp cho cả nam và nữ.
+                      </p>
+
+                      <div class="price-box">
+                        <p class="price">$65.00</p>
+                        <del>$95.00</del>
+                      </div>
+
+                      <button class="add-cart-btn">Thêm Vào Giỏ Hàng</button>
+
+                      <div class="showcase-status">
+                        <div class="wrapper">
+                          <p>Đã Bán: <b>642</b></p>
+                          <p>Còn Lại: <b>58</b></p>
+                        </div>
+
+                        <div class="showcase-status-bar"></div>
+                      </div>
+
+                      <div class="countdown-box">
+                        <p class="countdown-desc">
+                          Nhanh lên! Ưu đãi kết thúc trong:
+                        </p>
+
+                        <div class="countdown">
+                          <div class="countdown-content">
+                            <p class="display-number">03</p>
+                            <p class="display-text">Ngày</p>
+                          </div>
+
+                          <div class="countdown-content">
+                            <p class="display-number">14</p>
+                            <p class="display-text">Giờ</p>
+                          </div>
+
+                          <div class="countdown-content">
+                            <p class="display-number">35</p>
+                            <p class="display-text">Phút</p>
+                          </div>
+
+                          <div class="countdown-content">
+                            <p class="display-number">18</p>
+                            <p class="display-text">Giây</p>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- Sản phẩm 4 -->
+                <div class="showcase-container">
+                  <div class="showcase">
+                    <div class="showcase-banner">
+                      <img
+                        src="https://images.unsplash.com/photo-1600086827875-a63b01f1335c"
+                        alt="Tai nghe không dây chống ồn"
+                        class="showcase-img"
+                      />
+                    </div>
+
+                    <div class="showcase-content">
+                      <div class="showcase-rating">
+                        <ion-icon name="star"></ion-icon>
+                        <ion-icon name="star"></ion-icon>
+                        <ion-icon name="star"></ion-icon>
+                        <ion-icon name="star"></ion-icon>
+                        <ion-icon name="star-half-outline"></ion-icon>
+                      </div>
+
+                      <a href="#"
+                        ><h3 class="showcase-title">
+                          TAI NGHE KHÔNG DÂY CHỐNG ỒN SOUNDMAX
+                        </h3></a
+                      >
+                      <p class="showcase-desc">
+                        Tai nghe bluetooth cao cấp với công nghệ chống ồn chủ
+                        động, cảm biến tự động dừng khi tháo tai nghe. Thời
+                        lượng pin 36 giờ, chống nước IPX5, âm thanh Hi-Res chuẩn
+                        studio.
+                      </p>
+
+                      <div class="price-box">
+                        <p class="price">$149.00</p>
+                        <del>$229.00</del>
+                      </div>
+
+                      <button class="add-cart-btn">Thêm Vào Giỏ Hàng</button>
+
+                      <div class="showcase-status">
+                        <div class="wrapper">
+                          <p>Đã Bán: <b>835</b></p>
+                          <p>Còn Lại: <b>165</b></p>
+                        </div>
+
+                        <div class="showcase-status-bar"></div>
+                      </div>
+
+                      <div class="countdown-box">
+                        <p class="countdown-desc">
+                          Nhanh lên! Ưu đãi kết thúc trong:
+                        </p>
+
+                        <div class="countdown">
+                          <div class="countdown-content">
+                            <p class="display-number">01</p>
+                            <p class="display-text">Ngày</p>
+                          </div>
+
+                          <div class="countdown-content">
+                            <p class="display-number">18</p>
+                            <p class="display-text">Giờ</p>
+                          </div>
+
+                          <div class="countdown-content">
+                            <p class="display-number">56</p>
+                            <p class="display-text">Phút</p>
+                          </div>
+
+                          <div class="countdown-content">
+                            <p class="display-number">22</p>
+                            <p class="display-text">Giây</p>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- Sản phẩm 5 -->
+                <div class="showcase-container">
+                  <div class="showcase">
+                    <div class="showcase-banner">
+                      <img
+                        src="https://down-vn.img.susercontent.com/file/094b274e1d60c83f4a3bfe3d5e2a58fb"
+                        alt="Bộ dụng cụ trang điểm chuyên nghiệp"
+                        class="showcase-img"
+                      />
+                    </div>
+
+                    <div class="showcase-content">
+                      <div class="showcase-rating">
+                        <ion-icon name="star"></ion-icon>
+                        <ion-icon name="star"></ion-icon>
+                        <ion-icon name="star"></ion-icon>
+                        <ion-icon name="star"></ion-icon>
+                        <ion-icon name="star-outline"></ion-icon>
+                      </div>
+
+                      <a href="#"
+                        ><h3 class="showcase-title">
+                          BỘ TRANG ĐIỂM CHUYÊN NGHIỆP GLAMOUR
+                        </h3></a
+                      >
+                      <p class="showcase-desc">
+                        Bộ trang điểm cao cấp gồm 24 sản phẩm từ cơ bản đến
+                        chuyên nghiệp, bao gồm phấn nền, phấn mắt, son môi và cọ
+                        trang điểm. Thành phần lành tính, không gây kích ứng,
+                        phù hợp với mọi loại da.
+                      </p>
+
+                      <div class="price-box">
+                        <p class="price">$135.00</p>
+                        <del>$199.00</del>
+                      </div>
+
+                      <button class="add-cart-btn">Thêm Vào Giỏ Hàng</button>
+
+                      <div class="showcase-status">
+                        <div class="wrapper">
+                          <p>Đã Bán: <b>467</b></p>
+                          <p>Còn Lại: <b>33</b></p>
+                        </div>
+
+                        <div class="showcase-status-bar"></div>
+                      </div>
+
+                      <div class="countdown-box">
+                        <p class="countdown-desc">
+                          Nhanh lên! Ưu đãi kết thúc trong:
+                        </p>
+
+                        <div class="countdown">
+                          <div class="countdown-content">
+                            <p class="display-number">04</p>
+                            <p class="display-text">Ngày</p>
+                          </div>
+
+                          <div class="countdown-content">
+                            <p class="display-number">06</p>
+                            <p class="display-text">Giờ</p>
+                          </div>
+
+                          <div class="countdown-content">
+                            <p class="display-number">42</p>
+                            <p class="display-text">Phút</p>
+                          </div>
+
+                          <div class="countdown-content">
+                            <p class="display-number">15</p>
+                            <p class="display-text">Giây</p>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- Sản phẩm 6 -->
+                <div class="showcase-container">
+                  <div class="showcase">
+                    <div class="showcase-banner">
+                      <img
+                        src="https://product.hstatic.net/1000269337/product/gong-kinh-titan-bolon-mason-bl1012__6__57c659ea85b746118f60c19bd981ec26_master.jpg"
+                        alt="Kính mát phân cực cao cấp"
+                        class="showcase-img"
+                      />
+                    </div>
+
+                    <div class="showcase-content">
+                      <div class="showcase-rating">
+                        <ion-icon name="star"></ion-icon>
+                        <ion-icon name="star"></ion-icon>
+                        <ion-icon name="star"></ion-icon>
+                        <ion-icon name="star"></ion-icon>
+                        <ion-icon name="star"></ion-icon>
+                      </div>
+
+                      <a href="#"
+                        ><h3 class="showcase-title">
+                          KÍNH MÁT PHÂN CỰC AVIATOR LUXURY
+                        </h3></a
+                      >
+                      <p class="showcase-desc">
+                        Kính mát phân cực cao cấp với khung titanium siêu nhẹ,
+                        tròng kính chống tia UV 400%, chống chói và bảo vệ mắt
+                        toàn diện. Thiết kế unisex phù hợp với mọi khuôn mặt và
+                        phong cách.
+                      </p>
+
+                      <div class="price-box">
+                        <p class="price">$99.00</p>
+                        <del>$159.00</del>
+                      </div>
+
+                      <button class="add-cart-btn">Thêm Vào Giỏ Hàng</button>
+
+                      <div class="showcase-status">
+                        <div class="wrapper">
+                          <p>Đã Bán: <b>286</b></p>
+                          <p>Còn Lại: <b>64</b></p>
+                        </div>
+
+                        <div class="showcase-status-bar"></div>
+                      </div>
+
+                      <div class="countdown-box">
+                        <p class="countdown-desc">
+                          Nhanh lên! Ưu đãi kết thúc trong:
+                        </p>
+
+                        <div class="countdown">
+                          <div class="countdown-content">
+                            <p class="display-number">02</p>
+                            <p class="display-text">Ngày</p>
+                          </div>
+
+                          <div class="countdown-content">
+                            <p class="display-number">10</p>
+                            <p class="display-text">Giờ</p>
+                          </div>
+
+                          <div class="countdown-content">
+                            <p class="display-number">15</p>
+                            <p class="display-text">Phút</p>
+                          </div>
+
+                          <div class="countdown-content">
+                            <p class="display-number">50</p>
+                            <p class="display-text">Giây</p>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- Sản phẩm 7 -->
+                <div class="showcase-container">
+                  <div class="showcase">
+                    <div class="showcase-banner">
+                      <img
+                        src="https://down-vn.img.susercontent.com/file/vn-11134207-7r98o-ltetcdk417lw68"
+                        alt="Giày thể thao đa năng"
+                        class="showcase-img"
+                      />
+                    </div>
+
+                    <div class="showcase-content">
+                      <div class="showcase-rating">
+                        <ion-icon name="star"></ion-icon>
+                        <ion-icon name="star"></ion-icon>
+                        <ion-icon name="star"></ion-icon>
+                        <ion-icon name="star"></ion-icon>
+                        <ion-icon name="star-half-outline"></ion-icon>
+                      </div>
+
+                      <a href="#"
+                        ><h3 class="showcase-title">
+                          GIÀY THỂ THAO ĐA NĂNG FLEXSTEP
+                        </h3></a
+                      >
+                      <p class="showcase-desc">
+                        Giày thể thao đa năng với công nghệ đệm khí 360 độ,
+                        trọng lượng siêu nhẹ chỉ 220g. Phù hợp cho mọi hoạt động
+                        từ chạy bộ đến tập gym. Chất liệu thoáng khí, kháng
+                        khuẩn và khử mùi tự nhiên.
+                      </p>
+
+                      <div class="price-box">
+                        <p class="price">$89.00</p>
+                        <del>$139.00</del>
+                      </div>
+
+                      <button class="add-cart-btn">Thêm Vào Giỏ Hàng</button>
+
+                      <div class="showcase-status">
+                        <div class="wrapper">
+                          <p>Đã Bán: <b>753</b></p>
+                          <p>Còn Lại: <b>247</b></p>
+                        </div>
+
+                        <div class="showcase-status-bar"></div>
+                      </div>
+
+                      <div class="countdown-box">
+                        <p class="countdown-desc">
+                          Nhanh lên! Ưu đãi kết thúc trong:
+                        </p>
+
+                        <div class="countdown">
+                          <div class="countdown-content">
+                            <p class="display-number">05</p>
+                            <p class="display-text">Ngày</p>
+                          </div>
+
+                          <div class="countdown-content">
+                            <p class="display-number">23</p>
                             <p class="display-text">Giờ</p>
                           </div>
 
@@ -2065,7 +2856,246 @@
                           </div>
 
                           <div class="countdown-content">
-                            <p class="display-number">00</p>
+                            <p class="display-number">49</p>
+                            <p class="display-text">Giây</p>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- Sản phẩm 8 -->
+                <div class="showcase-container">
+                  <div class="showcase">
+                    <div class="showcase-banner">
+                      <img
+                        src="https://chefjob.vn/wp-content/uploads/2019/08/dao-danh-cho-dau-bep-da-dang-phong-phu.jpg"
+                        alt="Bộ dao nhà bếp chuyên nghiệp"
+                        class="showcase-img"
+                      />
+                    </div>
+
+                    <div class="showcase-content">
+                      <div class="showcase-rating">
+                        <ion-icon name="star"></ion-icon>
+                        <ion-icon name="star"></ion-icon>
+                        <ion-icon name="star"></ion-icon>
+                        <ion-icon name="star"></ion-icon>
+                        <ion-icon name="star"></ion-icon>
+                      </div>
+
+                      <a href="#"
+                        ><h3 class="showcase-title">
+                          BỘ DAO NHÀ BẾP CHUYÊN NGHIỆP MASTERCHEF
+                        </h3></a
+                      >
+                      <p class="showcase-desc">
+                        Bộ dao nhà bếp 7 món được rèn từ thép Damascus 67 lớp,
+                        sắc bén vượt trội và bền đẹp theo thời gian. Cán dao
+                        ergonomic chống mỏi tay, kèm theo hộp gỗ sang trọng và
+                        dụng cụ mài dao chuyên dụng.
+                      </p>
+
+                      <div class="price-box">
+                        <p class="price">$179.00</p>
+                        <del>$259.00</del>
+                      </div>
+
+                      <button class="add-cart-btn">Thêm Vào Giỏ Hàng</button>
+
+                      <div class="showcase-status">
+                        <div class="wrapper">
+                          <p>Đã Bán: <b>125</b></p>
+                          <p>Còn Lại: <b>25</b></p>
+                        </div>
+
+                        <div class="showcase-status-bar"></div>
+                      </div>
+
+                      <div class="countdown-box">
+                        <p class="countdown-desc">
+                          Nhanh lên! Ưu đãi kết thúc trong:
+                        </p>
+
+                        <div class="countdown">
+                          <div class="countdown-content">
+                            <p class="display-number">03</p>
+                            <p class="display-text">Ngày</p>
+                          </div>
+
+                          <div class="countdown-content">
+                            <p class="display-number">07</p>
+                            <p class="display-text">Giờ</p>
+                          </div>
+
+                          <div class="countdown-content">
+                            <p class="display-number">32</p>
+                            <p class="display-text">Phút</p>
+                          </div>
+
+                          <div class="countdown-content">
+                            <p class="display-number">10</p>
+                            <p class="display-text">Giây</p>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- Sản phẩm 9 -->
+                <div class="showcase-container">
+                  <div class="showcase">
+                    <div class="showcase-banner">
+                      <img
+                        src="https://images.unsplash.com/photo-1594035910387-fea47794261f"
+                        alt="Nước Hoa"
+                        class="showcase-img"
+                      />
+                    </div>
+
+                    <div class="showcase-content">
+                      <div class="showcase-rating">
+                        <ion-icon name="star"></ion-icon>
+                        <ion-icon name="star"></ion-icon>
+                        <ion-icon name="star"></ion-icon>
+                        <ion-icon name="star"></ion-icon>
+                        <ion-icon name="star-half-outline"></ion-icon>
+                      </div>
+
+                      <a href="#"
+                        ><h3 class="showcase-title">Coco Noir Chanel</h3></a
+                      >
+                      <p class="showcase-desc">
+                        Coco Noir của Chanel là một hương thơm bằng gỗ phương
+                        Đông cho phụ nữ. Coco Noir được ra mắt vào năm 2012.
+                        Coco Noir được tạo ra bởi Jacques Polge và Christopher
+                        Sheldrake. Ghi chú hàng đầu là bưởi, bergamot và cam;
+                        Ghi chú giữa là Rose, Geranium, Jasmine, Narcissus và
+                        Peach; Ghi chú cơ sở là hoắc hương, gỗ đàn hương,
+                        olibanum, đậu tonka, vanille, xạ hương trắng, đinh hương
+                        và benzoin.
+                      </p>
+
+                      <div class="price-box">
+                        <p class="price">$249.00</p>
+                        <del>$399.00</del>
+                      </div>
+
+                      <button class="add-cart-btn">Thêm Vào Giỏ Hàng</button>
+
+                      <div class="showcase-status">
+                        <div class="wrapper">
+                          <p>Đã Bán: <b>87</b></p>
+                          <p>Còn Lại: <b>13</b></p>
+                        </div>
+
+                        <div class="showcase-status-bar"></div>
+                      </div>
+
+                      <div class="countdown-box">
+                        <p class="countdown-desc">
+                          Nhanh lên! Ưu đãi kết thúc trong:
+                        </p>
+
+                        <div class="countdown">
+                          <div class="countdown-content">
+                            <p class="display-number">01</p>
+                            <p class="display-text">Ngày</p>
+                          </div>
+
+                          <div class="countdown-content">
+                            <p class="display-number">04</p>
+                            <p class="display-text">Giờ</p>
+                          </div>
+
+                          <div class="countdown-content">
+                            <p class="display-number">25</p>
+                            <p class="display-text">Phút</p>
+                          </div>
+
+                          <div class="countdown-content">
+                            <p class="display-number">38</p>
+                            <p class="display-text">Giây</p>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- Sản phẩm 10 -->
+                <div class="showcase-container">
+                  <div class="showcase">
+                    <div class="showcase-banner">
+                      <img
+                        src="https://www.gento.vn/wp-content/uploads/2022/05/tui-kelly-da-ca-sau-Gento-GS10027.jpg"
+                        alt="Túi XáchXách"
+                        class="showcase-img"
+                      />
+                    </div>
+
+                    <div class="showcase-content">
+                      <div class="showcase-rating">
+                        <ion-icon name="star"></ion-icon>
+                        <ion-icon name="star"></ion-icon>
+                        <ion-icon name="star"></ion-icon>
+                        <ion-icon name="star"></ion-icon>
+                        <ion-icon name="star"></ion-icon>
+                      </div>
+
+                      <a href="#"
+                        ><h3 class="showcase-title">
+                          Gento GS1002 albino crocodile skin kelly bag
+                        </h3></a
+                      >
+                      <p class="showcase-desc">
+                        Sản phẩm đỉnh cao của sự sang trọng và quý phái. Được
+                        thiết kế tinh xảo từ chất liệu da cá sấu Thái Lan nhuộm
+                        bạch tạng, chiếc túi này không chỉ mang đến vẻ đẹp tinh
+                        tế mà còn đảm bảo chất lượng và độ bền lâu dài.
+                      </p>
+
+                      <div class="price-box">
+                        <p class="price">$199.00</p>
+                        <del>$299.00</del>
+                      </div>
+
+                      <button class="add-cart-btn">Thêm Vào Giỏ Hàng</button>
+
+                      <div class="showcase-status">
+                        <div class="wrapper">
+                          <p>Đã Bán: <b>92</b></p>
+                          <p>Còn Lại: <b>28</b></p>
+                        </div>
+
+                        <div class="showcase-status-bar"></div>
+                      </div>
+
+                      <div class="countdown-box">
+                        <p class="countdown-desc">
+                          Nhanh lên! Ưu đãi kết thúc trong:
+                        </p>
+
+                        <div class="countdown">
+                          <div class="countdown-content">
+                            <p class="display-number">02</p>
+                            <p class="display-text">Ngày</p>
+                          </div>
+
+                          <div class="countdown-content">
+                            <p class="display-number">21</p>
+                            <p class="display-text">Giờ</p>
+                          </div>
+
+                          <div class="countdown-content">
+                            <p class="display-number">15</p>
+                            <p class="display-text">Phút</p>
+                          </div>
+
+                          <div class="countdown-content">
+                            <p class="display-number">27</p>
                             <p class="display-text">Giây</p>
                           </div>
                         </div>
@@ -2075,6 +3105,7 @@
                 </div>
               </div>
             </div>
+
             <div class="product-main">
               <h2 class="title">Sản Phẩm Mới</h2>
 
@@ -2082,14 +3113,14 @@
                 <div class="showcase">
                   <div class="showcase-banner">
                     <img
-                      src="https://i.postimg.cc/jdybNKWJ/jacket-3.jpg"
-                      alt="Áo khoác da nam mùa đông"
+                      src="https://pos.nvncdn.com/c1bbe5-93650/ps/20240422_ksBFV2MuuS.jpeg"
+                      alt="Áo khoác"
                       class="product-img default"
                       width="300"
                     />
                     <img
-                      src="https://i.postimg.cc/pr9cj4HT/jacket-4.jpg"
-                      alt="Áo khoác da nam mùa đông"
+                      src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT8INKv8w4R9EJO1mwW5G4bDg-SGKecV3B63XW6yPaXoNsQsc_cednQQGZ4MZFIeiJE6_g&usqp=CAU"
+                      alt="Áo khoác"
                       class="product-img hover"
                       width="300"
                     />
@@ -2116,7 +3147,7 @@
                     <a href="#" class="showcase-category">Áo Khoác</a>
                     <a href="#"
                       ><h3 class="showcase-title">
-                        Áo khoác da nam mùa đông
+                        HEAVIEST BOMBER JACKET - BLACK
                       </h3></a
                     >
 
@@ -2134,17 +3165,125 @@
                     </div>
                   </div>
                 </div>
+                <div class="showcase">
+                  <div class="showcase-banner">
+                    <img
+                      src="https://product.hstatic.net/1000340570/product/jean-paul-gaultier-scandal-80ml_d7f6145d41b047e1a48066c0b17c3ab6_master.jpg"
+                      alt="Jean Paul Gaultier Scandal"
+                      class="product-img default"
+                      width="300"
+                    />
+                    <img
+                      src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSPymqpV7XWaBwj8pjK_Symk0e829itGsjIDnU-a8LUGAgv9FTWztbSlqCjj_xag9B6CiM&usqp=CAU"
+                      alt="Jean Paul Gaultier Scandal"
+                      class="product-img hover"
+                      width="300"
+                    />
+
+                    <p class="showcase-badge angle pink">MỚI</p>
+
+                    <div class="showcase-actions">
+                      <button class="btn-action">
+                        <ion-icon name="heart-outline"></ion-icon>
+                      </button>
+                      <button class="btn-action">
+                        <ion-icon name="eye-outline"></ion-icon>
+                      </button>
+                      <button class="btn-action">
+                        <ion-icon name="repeat-outline"></ion-icon>
+                      </button>
+                      <button class="btn-action">
+                        <ion-icon name="bag-add-outline"></ion-icon>
+                      </button>
+                    </div>
+                  </div>
+
+                  <div class="showcase-content">
+                    <a href="#" class="showcase-category">NƯỚC HOA NỮ</a>
+                    <a href="#"
+                      ><h3 class="showcase-title">
+                        Jean Paul Gaultier Scandal
+                      </h3></a
+                    >
+
+                    <div class="showcase-rating">
+                      <ion-icon name="star"></ion-icon>
+                      <ion-icon name="star"></ion-icon>
+                      <ion-icon name="star"></ion-icon>
+                      <ion-icon name="star"></ion-icon>
+                      <ion-icon name="star-half-outline"></ion-icon>
+                    </div>
+
+                    <div class="price-box">
+                      <p class="price">$92.00</p>
+                      <del>$135.00</del>
+                    </div>
+                  </div>
+                </div>
+                <div class="showcase">
+                  <div class="showcase-banner">
+                    <img
+                      src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSJN23_S3eDtMgDjtHVD0BqapnGpq4tDOqx7A&s"
+                      alt="Dior Sauvage EDP"
+                      class="product-img default"
+                      width="300"
+                    />
+                    <img
+                      src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQUwL-7_G4nHknJQKX4zPAcVo_EdcAR6HGuhw&s"
+                      alt="Dior Sauvage EDP"
+                      class="product-img hover"
+                      width="300"
+                    />
+
+                    <p class="showcase-badge angle black">Giảm Giá</p>
+
+                    <div class="showcase-actions">
+                      <button class="btn-action">
+                        <ion-icon name="heart-outline"></ion-icon>
+                      </button>
+                      <button class="btn-action">
+                        <ion-icon name="eye-outline"></ion-icon>
+                      </button>
+                      <button class="btn-action">
+                        <ion-icon name="repeat-outline"></ion-icon>
+                      </button>
+                      <button class="btn-action">
+                        <ion-icon name="bag-add-outline"></ion-icon>
+                      </button>
+                    </div>
+                  </div>
+
+                  <div class="showcase-content">
+                    <a href="#" class="showcase-category">NƯỚC HOA NAM</a>
+                    <a href="#"
+                      ><h3 class="showcase-title">Dior Sauvage EDP</h3></a
+                    >
+
+                    <div class="showcase-rating">
+                      <ion-icon name="star"></ion-icon>
+                      <ion-icon name="star"></ion-icon>
+                      <ion-icon name="star"></ion-icon>
+                      <ion-icon name="star"></ion-icon>
+                      <ion-icon name="star-outline"></ion-icon>
+                    </div>
+
+                    <div class="price-box">
+                      <p class="price">$110.00</p>
+                      <del>$145.00</del>
+                    </div>
+                  </div>
+                </div>
 
                 <div class="showcase">
                   <div class="showcase-banner">
                     <img
-                      src="https://i.postimg.cc/02w43fPg/shirt-1.jpg"
+                      src="https://shopmebi.com/wp-content/uploads/2023/07/ao-so-mi-nam-dai-tay-goods_64_448372.jpg"
                       alt="Áo sơ mi cotton nhuộm thuần túy"
                       class="product-img default"
                       width="300"
                     />
                     <img
-                      src="https://i.postimg.cc/dVbq6JMK/shirt-2.jpg"
+                      src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTJBVcU23wC-FS0Gk5Kb_T_RxK8i6IdoVLDUr47-8kZ-zjGq7MmZPbgpyC__NnSshRkVjU&usqp=CAU"
                       alt="Áo sơ mi cotton nhuộm thuần túy"
                       class="product-img hover"
                       width="300"
@@ -2172,7 +3311,7 @@
                     <a href="#" class="showcase-category">ÁO SƠ MI</a>
                     <a href="#"
                       ><h3 class="showcase-title">
-                        Áo sơ mi cotton nhuộm thuần túy
+                        Áo sơ mi Uniqlo Extra Fine Cotton
                       </h3></a
                     >
 
@@ -2194,19 +3333,17 @@
                 <div class="showcase">
                   <div class="showcase-banner">
                     <img
-                      src="https://i.postimg.cc/DZ3QSqRG/jacket-5.jpg"
-                      alt="Áo khoác nỉ nam"
+                      src="https://tierra.vn/wp-content/uploads/2024/06/bo-trang-suc-bach-kim-kim-cuong-set2117-valentine-natural-r7QIww0x3v.webp"
+                      alt="Trang sức"
                       class="product-img default"
                       width="300"
                     />
                     <img
-                      src="https://i.postimg.cc/RFnYQp6s/jacket-6.jpg"
-                      alt="Áo khoác nỉ nam"
+                      src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSPgC6VybGAX2y0pEpIdzXR_ogq1lYZ1T4X5I4E7HDMF3Bq4lg2aeDU8RVA4_EWh6t-Vec&usqp=CAU"
+                      alt="Trang sức"
                       class="product-img hover"
                       width="300"
                     />
-
-                    <!-- <p class="showcase-badge angle black">Sale</p> -->
 
                     <div class="showcase-actions">
                       <button class="btn-action">
@@ -2225,16 +3362,16 @@
                   </div>
 
                   <div class="showcase-content">
-                    <a href="#" class="showcase-category">ÁO KHOÁC</a>
+                    <a href="#" class="showcase-category">Trang Sức</a>
                     <a href="#"
-                      ><h3 class="showcase-title">Áo khoác nỉ nam</h3></a
+                      ><h3 class="showcase-title">PNJ Family Infinity</h3></a
                     >
 
                     <div class="showcase-rating">
                       <ion-icon name="star"></ion-icon>
                       <ion-icon name="star"></ion-icon>
                       <ion-icon name="star"></ion-icon>
-                      <ion-icon name="star-outline"></ion-icon>
+                      <ion-icon name="star"></ion-icon>
                       <ion-icon name="star-outline"></ion-icon>
                     </div>
 
@@ -2302,19 +3439,17 @@
                 <div class="showcase">
                   <div class="showcase-banner">
                     <img
-                      src="https://i.postimg.cc/0yCHGD6R/shoe-2.jpg"
-                      alt="Giày thường ngày nam màu nâu"
+                      src="https://assets.adidas.com/images/w_600,f_auto,q_auto/b19389122c51434eb5bea8bf0117da35_9366/Giay_Samba_OG_trang_B75806_07_standard.jpg"
+                      alt="Giày"
                       class="product-img default"
                       width="300"
                     />
                     <img
-                      src="https://i.postimg.cc/TY29THdz/shoe-2-1.jpg"
-                      alt="Giày thường ngày nam màu nâu"
+                      src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRh_p15ojHaiRBaaaAPSjq2WPrLTLD0VrF4EHIllOnjpOgz8LHgKLbAiJXhN3YOc2bM_zg&usqp=CAU"
+                      alt="Giày"
                       class="product-img hover"
                       width="300"
                     />
-
-                    <!-- <p class="showcase-badge angle black">Sale</p> -->
 
                     <div class="showcase-actions">
                       <button class="btn-action">
@@ -2333,10 +3468,10 @@
                   </div>
 
                   <div class="showcase-content">
-                    <a href="#" class="showcase-category">THƯỜNG NGÀY</a>
+                    <a href="#" class="showcase-category">Sneakers</a>
                     <a href="#"
                       ><h3 class="showcase-title">
-                        Giày thường ngày nam màu nâu
+                        Adidas Samba OG
                       </h3></a
                     >
 
@@ -2358,14 +3493,14 @@
                 <div class="showcase">
                   <div class="showcase-banner">
                     <img
-                      src="https://i.postimg.cc/jq84QT45/watch-3.jpg"
-                      alt="Túi đựng đồng hồ bỏ túi bằng da"
+                      src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSVmlp3IPnqN7F51F_ybaha1ybev5NDB2lEgSY-ZwE8kLXf3gLKnHR364aNyySZTVNGL3w&usqp=CAU"
+                      alt="đồng hồ"
                       class="product-img default"
                       width="300"
                     />
                     <img
-                      src="https://i.postimg.cc/tRk3vt32/watch-4.jpg"
-                      alt="Túi đựng đồng hồ bỏ túi bằng da"
+                      src="https://empireluxury.vn/wp-content/uploads/2022/06/dong-ho-rolex-datejust-31-278273-0032-mat-so-hoa-tiet-hoa-xanh-olive-day-deo-jubilee-thep-vang-vang-4-1.jpg"
+                      alt="đồng hồ"
                       class="product-img hover"
                       width="300"
                     />
@@ -2392,7 +3527,7 @@
                     <a href="#" class="showcase-category">ĐỒNG HỒ</a>
                     <a href="#"
                       ><h3 class="showcase-title">
-                        Túi đựng đồng hồ bỏ túi bằng da
+                        Rolex Datejust 31 278273-0032 Floral Motif
                       </h3></a
                     >
 
@@ -2400,13 +3535,13 @@
                       <ion-icon name="star"></ion-icon>
                       <ion-icon name="star"></ion-icon>
                       <ion-icon name="star"></ion-icon>
-                      <ion-icon name="star-outline"></ion-icon>
+                      <ion-icon name="star"></ion-icon>
                       <ion-icon name="star-outline"></ion-icon>
                     </div>
 
                     <div class="price-box">
-                      <p class="price">150.00</p>
-                      <del>$170.00</del>
+                      <p class="price">1274.67</p>
+                      <del>$1369.51</del>
                     </div>
                   </div>
                 </div>
@@ -2425,9 +3560,6 @@
                       class="product-img hover"
                       width="300"
                     />
-
-                    <!-- <p class="showcase-badge angle black">Sale</p> -->
-
                     <div class="showcase-actions">
                       <button class="btn-action">
                         <ion-icon name="heart-outline"></ion-icon>
@@ -2470,13 +3602,13 @@
                 <div class="showcase">
                   <div class="showcase-banner">
                     <img
-                      src="https://i.postimg.cc/qRPjQYmZ/party-wear-1.jpg"
+                      src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQbytYpNMQ1KTz6USSZVbpgAK_ATaZJFDVVkR33UvzasiuJ-1DPAPSFafH26lWB718ANFk&usqp=CAU"
                       alt="Giày dự tiệc nữ"
                       class="product-img default"
                       width="300"
                     />
                     <img
-                      src="https://i.postimg.cc/FKhF6cgV/party-wear-2.jpg"
+                      src="https://gafa.vn/wp-content/uploads/2019/01/Nh%E1%BB%AFng-m%E1%BA%ABu-gi%C3%A0y-cao-g%C3%B3t-%C4%91%E1%BA%B9p-nh%E1%BA%A5t-th%E1%BA%BF-gi%E1%BB%9Bi-hi%E1%BB%87n-nay-2-1024x1024.jpg"
                       alt="Giày dự tiệc nữ"
                       class="product-img hover"
                       width="300"
@@ -2501,9 +3633,9 @@
                   </div>
 
                   <div class="showcase-content">
-                    <a href="#" class="showcase-category">TRANG PHỤC DỰ TIỆC</a>
+                    <a href="#" class="showcase-category">Giày</a>
                     <a href="#"
-                      ><h3 class="showcase-title">Giày dự tiệc nữ</h3></a
+                      ><h3 class="showcase-title">Christian Louboutin</h3></a
                     >
 
                     <div class="showcase-rating">
@@ -2524,20 +3656,17 @@
                 <div class="showcase">
                   <div class="showcase-banner">
                     <img
-                      src="https://i.postimg.cc/9fnSKNRh/jacket-1.jpg"
-                      alt="Áo khoác da nam mùa đông"
+                      src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSr8fYWsCSUpwUqVvWTKaVXn9VEDv9ZxHuR75ObnyCSrPdtbZ8qZEU9GXfwLwGeAwyoU78&usqp=CAU"
+                      alt="Dép"
                       class="product-img default"
                       width="300"
                     />
                     <img
-                      src="https://i.postimg.cc/T36WRKJp/jacket-2.jpg"
-                      alt="Áo khoác da nam mùa đông"
+                      src="https://product.hstatic.net/1000283230/product/z5564390643101_70854f8d20130c3e598185f385f0a375_4d5ae63b9a0241bcbe9aea3472ec1763_master.jpg"
+                      alt="Dép"
                       class="product-img hover"
                       width="300"
                     />
-
-                    <!-- <p class="showcase-badge angle black">Sale</p> -->
-
                     <div class="showcase-actions">
                       <button class="btn-action">
                         <ion-icon name="heart-outline"></ion-icon>
@@ -2555,10 +3684,10 @@
                   </div>
 
                   <div class="showcase-content">
-                    <a href="#" class="showcase-category">ÁO KHOÁC</a>
+                    <a href="#" class="showcase-category">Dép</a>
                     <a href="#"
                       ><h3 class="showcase-title">
-                        Áo khoác da nam mùa đông
+                        DÉP DA NAM
                       </h3></a
                     >
 
@@ -2635,20 +3764,17 @@
                 <div class="showcase">
                   <div class="showcase-banner">
                     <img
-                      src="https://i.postimg.cc/JnMtkwB5/shoe-1.jpg"
+                      src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTDx7WKb7qD2OtqH5Zn8nkxi7SWie5Hbh6cbaZ8nZSU_kNj_7bfT3J89uWhJxf8hdSV708&usqp=CAU"
                       alt="Giày da trang trọng nam"
                       class="product-img default"
                       width="300"
                     />
                     <img
-                      src="https://i.postimg.cc/BnLwGwNq/shoe-1-1.jpg"
+                      src="https://cdn-bibpn.nitrocdn.com/hKbBuPFwIeIdnRsQAWKmhqsdlJRcUBLl/assets/static/optimized/wp-content/uploads/2020/03/22cf3509fc5b80871088ba16c1685b53.giay-cong-so-nam-da-bo-mau-nau-ba-trau-m160.jpg"
                       alt="Giày da trang trọng nam"
                       class="product-img hover"
                       width="300"
                     />
-
-                    <!-- <p class="showcase-badge angle black">Sale</p> -->
-
                     <div class="showcase-actions">
                       <button class="btn-action">
                         <ion-icon name="heart-outline"></ion-icon>
@@ -2666,10 +3792,10 @@
                   </div>
 
                   <div class="showcase-content">
-                    <a href="#" class="showcase-category">TRANG TRỌNG</a>
+                    <a href="#" class="showcase-category">Giày Da</a>
                     <a href="#"
                       ><h3 class="showcase-title">
-                        Giày da trang trọng nam
+                        Giày công sở nam da bò
                       </h3></a
                     >
 
@@ -2691,14 +3817,14 @@
                 <div class="showcase">
                   <div class="showcase-banner">
                     <img
-                      src="https://i.postimg.cc/7Lmt7tMz/shorts-1.jpg"
-                      alt="Quần đùi nỉ cơ bản tốt hơn"
+                      src="https://product.hstatic.net/1000308345/product/img_3344_798720358be54ae5b7e81f57788d88ce_master.jpg"
+                      alt="Quần đùi"
                       class="product-img default"
                       width="300"
                     />
                     <img
-                      src="https://i.postimg.cc/cLBTZywG/shorts-2.jpg"
-                      alt="Quần đùi nỉ cơ bản tốt hơn"
+                      src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQr2lzcVBbDrvAQ8QdKzZaDuBe_qJYyQNZ0JGs-j8F__lF5vqX7ZP8XQrAJf2p0UMWmD90&usqp=CAU"
+                      alt="Quần đùi"
                       class="product-img hover"
                       width="300"
                     />
@@ -2722,10 +3848,10 @@
                   </div>
 
                   <div class="showcase-content">
-                    <a href="#" class="showcase-category">QUẦN ĐÙI</a>
+                    <a href="#" class="showcase-category">QUẦN SHORT</a>
                     <a href="#"
                       ><h3 class="showcase-title">
-                        Quần đùi nỉ cơ bản tốt hơn
+                        QUẦN SHORT JEAN ỐNG RỘNG WASH
                       </h3></a
                     >
 
@@ -2740,6 +3866,113 @@
                     <div class="price-box">
                       <p class="price">78.00</p>
                       <del>$85.00</del>
+                    </div>
+                  </div>
+                </div>
+                <div class="showcase">
+                  <div class="showcase-banner">
+                    <img
+                      src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSK2vKOZFU9Yak97-1aFlfi241lV-yn0DH8vTZXEjhVURRBqrLhMG4vWLg6ndiHZMvbGSw&usqp=CAU"
+                      alt="Túi xách nữ cao cấp"
+                      class="product-img default"
+                      width="300"
+                    />
+                    <img
+                      src="https://shopviets.com/wp-content/uploads/2024/01/Tui-xach-nu-hang-hieu-VIP-STX376-3.jpg"
+                      alt="Túi xách nữ cao cấp"
+                      class="product-img hover"
+                      width="300"
+                    />
+
+                    <p class="showcase-badge angle pink">MỚI</p>
+
+                    <div class="showcase-actions">
+                      <button class="btn-action">
+                        <ion-icon name="heart-outline"></ion-icon>
+                      </button>
+                      <button class="btn-action">
+                        <ion-icon name="eye-outline"></ion-icon>
+                      </button>
+                      <button class="btn-action">
+                        <ion-icon name="repeat-outline"></ion-icon>
+                      </button>
+                      <button class="btn-action">
+                        <ion-icon name="bag-add-outline"></ion-icon>
+                      </button>
+                    </div>
+                  </div>
+
+                  <div class="showcase-content">
+                    <a href="#" class="showcase-category">TÚI XÁCH</a>
+                    <a href="#"
+                      ><h3 class="showcase-title">
+                        Túi Xách Nữ Elegance VIP
+                      </h3></a
+                    >
+
+                    <div class="showcase-rating">
+                      <ion-icon name="star"></ion-icon>
+                      <ion-icon name="star"></ion-icon>
+                      <ion-icon name="star"></ion-icon>
+                      <ion-icon name="star"></ion-icon>
+                      <ion-icon name="star-half-outline"></ion-icon>
+                    </div>
+
+                    <div class="price-box">
+                      <p class="price">$125.00</p>
+                      <del>$180.00</del>
+                    </div>
+                  </div>
+                </div>
+                <div class="showcase">
+                  <div class="showcase-banner">
+                    <img
+                      src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS6TfuX4BmAoAHU00Igt8UpuIdAhnR0sN_cyweA4p3kQtU6IE7r-HfUBUoXVD2YPmij5So&usqp=CAU"
+                      alt="Oily Skin & Oil Control Set"
+                      class="product-img default"
+                      width="300"
+                    />
+                    <img
+                      src="https://edbeauty.vn/wp-content/uploads/2023/01/Image-Skincare-Thuong-hieu-duoc-my-pham-cao-cap-tai-My.jpg"
+                      alt="Oily Skin & Oil Control Set"
+                      class="product-img hover"
+                      width="300"
+                    />
+                    <p class="showcase-badge angle black">Giảm Giá</p>
+
+                    <div class="showcase-actions">
+                      <button class="btn-action">
+                        <ion-icon name="heart-outline"></ion-icon>
+                      </button>
+                      <button class="btn-action">
+                        <ion-icon name="eye-outline"></ion-icon>
+                      </button>
+                      <button class="btn-action">
+                        <ion-icon name="repeat-outline"></ion-icon>
+                      </button>
+                      <button class="btn-action">
+                        <ion-icon name="bag-add-outline"></ion-icon>
+                      </button>
+                    </div>
+                  </div>
+
+                  <div class="showcase-content">
+                    <a href="#" class="showcase-category">Mỹ Phẩm</a>
+                    <a href="#"
+                      ><h3 class="showcase-title">Oily Skin & Oil Control Set</h3></a
+                    >
+
+                    <div class="showcase-rating">
+                      <ion-icon name="star"></ion-icon>
+                      <ion-icon name="star"></ion-icon>
+                      <ion-icon name="star"></ion-icon>
+                      <ion-icon name="star"></ion-icon>
+                      <ion-icon name="star"></ion-icon>
+                    </div>
+
+                    <div class="price-box">
+                      <p class="price">$186.00</p>
+                      <del>$195.00</del>
                     </div>
                   </div>
                 </div>
@@ -2868,7 +4101,7 @@
             <div class="blog-card">
               <a href="#">
                 <img
-                  src="https://i.postimg.cc/2886v00v/blog-1.jpg"
+                  src="https://cdn1.genspark.ai/user-upload-image/flux_generated/17396035251473021560_0_687fc4ff-8458-47ac-b51b-7abd523dfd2d"
                   alt="Hướng dẫn KPI bán lẻ quần áo 2023 dành cho Giám đốc điều hành"
                   class="blog-banner"
                   width="300"
@@ -2879,7 +4112,7 @@
                 <a href="#" class="blog-category">Thời Trang</a>
                 <a href="#"
                   ><h3 class="blog-title">
-                    Hướng dẫn KPI bán lẻ quần áo 2023 dành cho Giám đốc điều
+                    Hướng dẫn KPI bán lẻ quần áo 2025 dành cho Giám đốc điều
                     hành
                   </h3></a
                 >
@@ -2893,7 +4126,7 @@
             <div class="blog-card">
               <a href="#">
                 <img
-                  src="https://i.postimg.cc/cJWPgbmG/blog-2.jpg"
+                  src="https://cdn1.genspark.ai/user-upload-image/flux_generated/8569168229103511884_0_1356bbfc-6c5b-414f-a936-5dbf0678b61f"
                   alt="Xu hướng thời trang Curbside: Làm thế nào để chiến thắng trong cuộc chiến đón khách"
                   class="blog-banner"
                   width="300"
@@ -2918,7 +4151,7 @@
             <div class="blog-card">
               <a href="#">
                 <img
-                  src="https://i.postimg.cc/BQkj0xCK/blog-3.jpg"
+                  src="https://cdn1.genspark.ai/user-upload-image/6_generated/2ceb5ec0-dcae-4b97-991f-ad00bf8d6927"
                   alt="Nhà cung cấp EBT: Yêu cầu phần của bạn từ doanh thu SNAP trực tuyến"
                   class="blog-banner"
                   width="300"
@@ -2943,7 +4176,7 @@
             <div class="blog-card">
               <a href="#">
                 <img
-                  src="https://i.postimg.cc/43Jskdjc/blog-4.jpg"
+                  src="https://cdn1.genspark.ai/user-upload-image/6_generated/d29d93f2-375b-48c2-867d-cc74a01d212e"
                   alt="Xu hướng thời trang Curbside: Làm thế nào để chiến thắng trong cuộc chiến đón khách"
                   class="blog-banner"
                   width="300"
@@ -2954,8 +4187,8 @@
                 <a href="#" class="blog-category">Điện Tử</a>
                 <a href="#"
                   ><h3 class="blog-title">
-                    Xu hướng thời trang Curbside: Làm thế nào để chiến thắng
-                    trong cuộc chiến đón khách
+                    Thời trang công nghệ Curbside: Làm thế nào để dẫn đầu trong
+                    việc chinh phục khách hàng
                   </h3></a
                 >
                 <p class="blog-meta">
@@ -2968,70 +4201,151 @@
         </div>
       </div>
     </main>
-
+    <section class="team-section">
+      <div class="team-header">
+        <span class="team-line"></span>
+        <h2 class="team-title">Our Team Members</h2>
+        <span class="team-line"></span>
+      </div>
+      <div class="team-container">
+        <div class="team-member">
+          <img src="../fb.jpg" alt="John Doe" class="member-img" />
+          <h3 class="member-name">Mr.Phong</h3>
+          <p class="member-role">CEO & Founder</p>
+          <div class="social-links">
+            <a href="#" class="social-link"
+              ><i class="fab fa-facebook-f"></i
+            ></a>
+            <a href="#" class="social-link"><i class="fab fa-twitter"></i></a>
+            <a href="#" class="social-link"><i class="fab fa-instagram"></i></a>
+            <a href="#" class="social-link"
+              ><i class="fab fa-linkedin-in"></i
+            ></a>
+          </div>
+        </div>
+        <div class="team-member">
+          <img
+            src="https://i.pinimg.com/236x/5e/e0/82/5ee082781b8c41406a2a50a0f32d6aa6.jpg"
+            alt="Jessica Brown"
+            class="member-img"
+          />
+          <h3 class="member-name">Mr.Hải</h3>
+          <p class="member-role">Web Designer</p>
+          <div class="social-links">
+            <a href="#" class="social-link"
+              ><i class="fab fa-facebook-f"></i
+            ></a>
+            <a href="#" class="social-link"><i class="fab fa-twitter"></i></a>
+            <a href="#" class="social-link"><i class="fab fa-instagram"></i></a>
+            <a href="#" class="social-link"
+              ><i class="fab fa-linkedin-in"></i
+            ></a>
+          </div>
+        </div>
+        <div class="team-member">
+          <img
+            src="https://scontent-sin11-1.xx.fbcdn.net/v/t39.30808-6/326133573_497719215766121_4179586505549813666_n.jpg?_nc_cat=104&ccb=1-7&_nc_sid=6ee11a&_nc_ohc=RJ6FVylIevYQ7kNvgG3zwrj&_nc_oc=AdiP1T1nRrRKd7rgyJdAPFWu1OiIGXma1mMGnwJR48mIQe1llAYtPi-DIpAKdIj6E_Q&_nc_zt=23&_nc_ht=scontent-sin11-1.xx&_nc_gid=AqtaY79c_QEnyWAiozglNNK&oh=00_AYD0bdRIKMPdI4wAI7PDxx7O4NRzuKsAIgT1JOtoMtisIA&oe=67C7C435"
+            alt="Tony Johnson"
+            class="member-img"
+          />
+          <h3 class="member-name">Mr.Mạnh</h3>
+          <p class="member-role">SEO Expert</p>
+          <div class="social-links">
+            <a href="#" class="social-link"
+              ><i class="fab fa-facebook-f"></i
+            ></a>
+            <a href="#" class="social-link"><i class="fab fa-twitter"></i></a>
+            <a href="#" class="social-link"><i class="fab fa-instagram"></i></a>
+            <a href="#" class="social-link"
+              ><i class="fab fa-linkedin-in"></i
+            ></a>
+          </div>
+        </div>
+      </div>
+    </section>
     <footer>
       <div class="footer-category">
-        <div class="container">
-          <h2 class="footer-category-title">Danh Mục Thương Hiệu</h2>
+        <h2 class="footer-category-title">Danh Mục Sản Phẩm</h2>
 
-          <div class="footer-category-box">
-            <h3 class="category-box-title">Thời Trang :</h3>
+        <div class="footer-category-box">
+          <h3 class="category-box-title">Trang Phục Cao Cấp :</h3>
 
-            <a href="#" class="footer-category-link">Áo Thun</a>
-            <a href="#" class="footer-category-link">Áo Sơ Mi</a>
-            <a href="#" class="footer-category-link">Quần Đùi & Quần Jean</a>
-            <a href="#" class="footer-category-link">Áo Khoác</a>
-            <a href="#" class="footer-category-link">Váy & Đầm</a>
-            <a href="#" class="footer-category-link">Đồ Lót</a>
-            <a href="#" class="footer-category-link">Tất & Vớ</a>
+          <div class="footer-links-wrapper">
+            <a href="#" class="footer-category-link">Áo Polo Premium</a>
+            <span class="link-separator">|</span>
+            <a href="#" class="footer-category-link">Áo Blazer Công Sở</a>
+            <span class="link-separator">|</span>
+            <a href="#" class="footer-category-link">Quần Kaki Đẳng Cấp</a>
+            <span class="link-separator">|</span>
+            <a href="#" class="footer-category-link">Áo Gile Thời Thượng</a>
+            <span class="link-separator">|</span>
+            <a href="#" class="footer-category-link">Đầm Dạ Hội Cao Cấp</a>
+            <span class="link-separator">|</span>
+            <a href="#" class="footer-category-link">Đồ Ngủ Sang Trọng</a>
+            <span class="link-separator">|</span>
+            <a href="#" class="footer-category-link">Khăn Choàng Lụa</a>
           </div>
+        </div>
 
-          <div class="footer-category-box">
-            <h3 class="category-box-title">Giày Dép :</h3>
+        <div class="footer-category-box">
+          <h3 class="category-box-title">Giày Dép Thời Thượng :</h3>
 
-            <a href="#" class="footer-category-link">Thể Thao</a>
-            <a href="#" class="footer-category-link">Trang Trọng</a>
-            <a href="#" class="footer-category-link">Bốt</a>
-            <a href="#" class="footer-category-link">Thường Ngày</a>
-            <a href="#" class="footer-category-link">Giày Cao Bồi</a>
-            <a href="#" class="footer-category-link">Giày Bảo Hộ</a>
-            <a href="#" class="footer-category-link">Giày Dự Tiệc</a>
-            <a href="#" class="footer-category-link">Thương Hiệu</a>
-            <a href="#" class="footer-category-link">Hàng Loại 1</a>
-            <a href="#" class="footer-category-link">Giày Cao Cổ</a>
+          <div class="footer-links-wrapper">
+            <a href="#" class="footer-category-link">Sneaker Giới Hạn</a>
+            <span class="link-separator">|</span>
+            <a href="#" class="footer-category-link">Giày Oxford Đẳng Cấp</a>
+            <span class="link-separator">|</span>
+            <a href="#" class="footer-category-link"
+              >Chelsea Boots Phong Cách</a
+            >
+            <span class="link-separator">|</span>
+            <a href="#" class="footer-category-link">Sandal Thiết Kế</a>
+            <span class="link-separator">|</span>
+            <a href="#" class="footer-category-link">Moccasin Da Thật</a>
+            <span class="link-separator">|</span>
+            <a href="#" class="footer-category-link">Giày Chống Trượt</a>
+            <span class="link-separator">|</span>
+            <a href="#" class="footer-category-link">Loafer Thủ Công</a>
           </div>
+        </div>
 
-          <div class="footer-category-box">
-            <h3 class="category-box-title">Trang Sức :</h3>
+        <div class="footer-category-box">
+          <h3 class="category-box-title">Phụ Kiện Thời Trang :</h3>
 
-            <a href="#" class="footer-category-link">Dây Chuyền</a>
-            <a href="#" class="footer-category-link">Bông Tai</a>
-            <a href="#" class="footer-category-link">Nhẫn Đôi</a>
-            <a href="#" class="footer-category-link">Mặt Dây Chuyền</a>
-            <a href="#" class="footer-category-link">Pha Lê</a>
-            <a href="#" class="footer-category-link">Vòng Tay Cứng</a>
-            <a href="#" class="footer-category-link">Vòng Tay</a>
-            <a href="#" class="footer-category-link">Khuyên Mũi</a>
-            <a href="#" class="footer-category-link">Dây Chuyền</a>
+          <div class="footer-links-wrapper">
+            <a href="#" class="footer-category-link">Vòng Cổ Kim Cương</a>
+            <span class="link-separator">|</span>
+            <a href="#" class="footer-category-link">Khuyên Tai Platinum</a>
+            <span class="link-separator">|</span>
+            <a href="#" class="footer-category-link">Lắc Tay Bạch Kim</a>
+            <span class="link-separator">|</span>
+            <a href="#" class="footer-category-link">Mặt Dây Sapphire</a>
+            <span class="link-separator">|</span>
+            <a href="#" class="footer-category-link">Trang Sức Swarovski</a>
+            <span class="link-separator">|</span>
+            <a href="#" class="footer-category-link">Lắc Chân Thời Trang</a>
+            <span class="link-separator">|</span>
+            <a href="#" class="footer-category-link">Đồng Hồ Thụy Sĩ</a>
           </div>
+        </div>
 
-          <div class="footer-category-box">
-            <h3 class="category-box-title">Mỹ Phẩm :</h3>
+        <div class="footer-category-box">
+          <h3 class="category-box-title">Mỹ Phẩm Cao Cấp :</h3>
 
-            <a href="#" class="footer-category-link">Dầu Gội</a>
-            <a href="#" class="footer-category-link">Sữa Tắm</a>
-            <a href="#" class="footer-category-link">Sữa Rửa Mặt</a>
-            <a href="#" class="footer-category-link">Bộ Trang Điểm</a>
-            <a href="#" class="footer-category-link">Kẻ Mắt</a>
-            <a href="#" class="footer-category-link">Son Môi</a>
-            <a href="#" class="footer-category-link">Nước Hoa</a>
-            <a href="#" class="footer-category-link">Xà Phòng Tắm</a>
-            <a href="#" class="footer-category-link">Tẩy Tế Bào Chết</a>
-            <a href="#" class="footer-category-link">Gel Tóc</a>
-            <a href="#" class="footer-category-link">Màu Nhuộm Tóc</a>
-            <a href="#" class="footer-category-link">Thuốc Nhuộm Tóc</a>
-            <a href="#" class="footer-category-link">Kem Chống Nắng</a>
-            <a href="#" class="footer-category-link">Lotion Dưỡng Da</a>
+          <div class="footer-links-wrapper">
+            <a href="#" class="footer-category-link">Serum Dưỡng Tóc</a>
+            <span class="link-separator">|</span>
+            <a href="#" class="footer-category-link">Sữa Tắm Hữu Cơ</a>
+            <span class="link-separator">|</span>
+            <a href="#" class="footer-category-link">Tẩy Trang Micellar</a>
+            <span class="link-separator">|</span>
+            <a href="#" class="footer-category-link">Phấn Nền Dưỡng Ẩm</a>
+            <span class="link-separator">|</span>
+            <a href="#" class="footer-category-link">Nước Hoa Unisex</a>
+            <span class="link-separator">|</span>
+            <a href="#" class="footer-category-link">Chống Nắng Vật Lý</a>
+            <span class="link-separator">|</span>
+            <a href="#" class="footer-category-link">Mặt Nạ Collagen</a>
           </div>
         </div>
       </div>
