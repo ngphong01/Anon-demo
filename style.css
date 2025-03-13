@@ -381,15 +381,15 @@
   }
 }
 
-/* ===== Giỏ Hàng Modal (Đã sửa) ===== */
+/* ===== Giỏ Hàng Modal ===== */
 .cart-modal {
   position: fixed;
-  bottom: 250px; /* Dịch lên trên 20px từ dưới cùng */
-  right: 10px; /* Căn phải với khoảng cách 10px từ mép */
+  top: 150px; 
+  right: 10px; 
   width: 100%;
-  max-width: 400px; /* Giới hạn chiều rộng */
+  max-width: 400px;
   height: auto;
-  max-height: 80vh; /* Giới hạn chiều cao để cuộn */
+  max-height: 80vh; 
   display: flex;
   justify-content: flex-end;
   align-items: flex-end;
@@ -397,7 +397,7 @@
   opacity: 0;
   visibility: hidden;
   transition: all 0.3s ease;
-  padding: 10px 0; /* Thêm padding dưới để tránh chồng lấn */
+  padding: 10px 0; 
 }
 
 .cart-modal.active {
@@ -423,6 +423,7 @@
 }
 
 .cart-header {
+  position: absolute;
   display: flex;
   justify-content: space-between;
   align-items: center;
