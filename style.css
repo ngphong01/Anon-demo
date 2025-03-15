@@ -380,6 +380,226 @@
     gap: 15px;
   }
 }
+/* ===== Modern Form Styles ===== */
+.modern-form-container {
+  max-width: 100%;
+  background: linear-gradient(0deg, rgb(255, 255, 255) 0%, rgb(244, 247, 251) 100%);
+  border-radius: 20px;
+  padding: 25px 35px;
+  border: 5px solid rgb(255, 255, 255);
+  box-shadow: rgba(133, 189, 215, 0.8784313725) 0px 30px 30px -20px;
+  margin: 0 auto;
+}
+
+.modern-form-container .heading {
+  text-align: center;
+  font-weight: 900;
+  font-size: 24px;
+  color: rgb(16, 137, 211);
+  margin-bottom: 15px;
+}
+
+.modern-form-container .form {
+  margin-top: 20px;
+}
+
+.modern-form-container .input {
+  width: 100%;
+  background: white;
+  border: none;
+  padding: 15px 20px;
+  border-radius: 20px;
+  margin-top: 15px;
+  box-shadow: #cff0ff 0px 10px 10px -5px;
+  border-inline: 2px solid transparent;
+}
+
+.modern-form-container .input::-moz-placeholder {
+  color: rgb(170, 170, 170);
+}
+
+.modern-form-container .input::placeholder {
+  color: rgb(170, 170, 170);
+}
+
+.modern-form-container .input:focus {
+  outline: none;
+  border-inline: 2px solid #12B1D1;
+}
+
+.modern-form-container .forgot-password {
+  display: block;
+  margin-top: 10px;
+  margin-left: 10px;
+}
+
+.modern-form-container .forgot-password a {
+  font-size: 12px;
+  color: #0099ff;
+  text-decoration: none;
+}
+
+.modern-form-container .login-button {
+  display: block;
+  width: 100%;
+  font-weight: bold;
+  background: linear-gradient(45deg, rgb(16, 137, 211) 0%, rgb(18, 177, 209) 100%);
+  color: white;
+  padding-block: 15px;
+  margin: 20px auto;
+  border-radius: 20px;
+  box-shadow: rgba(133, 189, 215, 0.8784313725) 0px 20px 10px -15px;
+  border: none;
+  transition: all 0.2s ease-in-out;
+  cursor: pointer;
+}
+
+.modern-form-container .login-button:hover {
+  transform: scale(1.03);
+  box-shadow: rgba(133, 189, 215, 0.8784313725) 0px 23px 10px -20px;
+}
+
+.modern-form-container .login-button:active {
+  transform: scale(0.95);
+  box-shadow: rgba(133, 189, 215, 0.8784313725) 0px 15px 10px -10px;
+}
+
+.modern-form-container .social-account-container {
+  margin-top: 25px;
+}
+
+.modern-form-container .social-account-container .title {
+  display: block;
+  text-align: center;
+  font-size: 14px;
+  color: rgb(170, 170, 170);
+}
+
+.modern-form-container .social-account-container .social-accounts {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  margin-top: 10px;
+}
+
+.modern-form-container .social-account-container .social-accounts .social-button {
+  background: linear-gradient(45deg, rgb(0, 0, 0) 0%, rgb(112, 112, 112) 100%);
+  border: 5px solid white;
+  padding: 5px;
+  border-radius: 50%;
+  width: 40px;
+  aspect-ratio: 1;
+  display: grid;
+  place-content: center;
+  box-shadow: rgba(133, 189, 215, 0.8784313725) 0px 12px 10px -8px;
+  transition: all 0.2s ease-in-out;
+  cursor: pointer;
+}
+
+.modern-form-container .social-account-container .social-accounts .social-button ion-icon {
+  fill: white;
+  color: white;
+  font-size: 18px;
+}
+
+.modern-form-container .social-account-container .social-accounts .social-button:hover {
+  transform: scale(1.2);
+}
+
+.modern-form-container .social-account-container .social-accounts .social-button:active {
+  transform: scale(0.9);
+}
+
+.modern-form-container .social-button.google {
+  background: linear-gradient(45deg, #DB4437 0%, #F4B400 100%);
+}
+
+.modern-form-container .social-button.apple {
+  background: linear-gradient(45deg, #000000 0%, #2c2c2c 100%);
+}
+
+.modern-form-container .social-button.facebook {
+  background: linear-gradient(45deg, #3b5998 0%, #4c6bba 100%);
+}
+
+.modern-form-container .agreement {
+  display: block;
+  text-align: center;
+  margin-top: 15px;
+}
+
+.modern-form-container .agreement a,
+.modern-form-container .agreement-checkbox a {
+  text-decoration: none;
+  color: #0099ff;
+  font-size: 12px;
+}
+
+.modern-form-container .agreement-checkbox {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-top: 15px;
+  font-size: 14px;
+  color: #666;
+}
+.agreement-checkbox {
+  display: flex;
+  align-items: flex-start;
+  margin-top: 15px;
+  position: relative;
+}
+
+.agreement-checkbox input[type="checkbox"] {
+  margin-right: 10px;
+  margin-top: 3px; /* Điều chỉnh vị trí dọc của checkbox */
+  flex-shrink: 0;
+}
+
+.agreement-checkbox span {
+  display: inline;
+  font-size: 14px;
+  color: #666;
+  line-height: 1.4;
+}
+
+.agreement-checkbox a {
+  color: #0099ff;
+  text-decoration: none;
+}
+
+.agreement-checkbox a:hover {
+  text-decoration: underline;
+}
+
+.modern-form-container .form-options {
+  margin-top: 5px;
+}
+
+/* Responsive adjustments for modern form */
+@media (max-width: 576px) {
+  .modern-form-container {
+    padding: 20px 15px;
+  }
+  
+  .modern-form-container .heading {
+    font-size: 20px;
+  }
+  
+  .modern-form-container .input {
+    padding: 12px 15px;
+  }
+  
+  .modern-form-container .social-account-container .social-accounts {
+    gap: 10px;
+  }
+  
+  .modern-form-container .social-account-container .social-accounts .social-button {
+    width: 35px;
+  }
+}
+
 
 /* ===== Giỏ Hàng Modal ===== */
 .cart-modal {
