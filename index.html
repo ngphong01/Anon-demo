@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Anon Thời Trang Nam - Nữ</title>
-    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="style.css"/>
     <link
       rel="shortcut icon"
       href="https://i.postimg.cc/R07Wy2gJ/favicon.png"
@@ -27,144 +27,79 @@
         <div class="auth-close-btn" id="authCloseBtn">
           <ion-icon name="close-outline"></ion-icon>
         </div>
-
+    
         <div class="auth-forms">
           <div class="auth-tabs">
             <div class="auth-tab active" data-tab="login">Đăng Nhập</div>
             <div class="auth-tab" data-tab="register">Đăng Ký</div>
           </div>
+    
+          <!-- Form Đăng Nhập Mới -->
           <div class="auth-form active" id="loginForm">
-            <div class="auth-header">
-              <h2>Chào Mừng Trở Lại</h2>
-              <p>Đăng nhập để trải nghiệm mua sắm tốt hơn</p>
-            </div>
-
-            <div class="social-login">
-              <button class="social-btn facebook">
-                <ion-icon name="logo-facebook"></ion-icon>
-                <span>Facebook</span>
-              </button>
-              <button class="social-btn google">
-                <ion-icon name="logo-google"></ion-icon>
-                <span>Google</span>
-              </button>
-            </div>
-
-            <div class="divider">
-              <span>hoặc đăng nhập với email</span>
-            </div>
-
-            <form action="#" class="auth-input-form">
-              <div class="form-group">
-                <div class="input-icon">
-                  <ion-icon name="mail-outline"></ion-icon>
-                </div>
-                <input type="email" placeholder="Email" required />
-              </div>
-
-              <div class="form-group">
-                <div class="input-icon">
-                  <ion-icon name="lock-closed-outline"></ion-icon>
-                </div>
-                <input type="password" placeholder="Mật khẩu" required />
-                <div class="toggle-password">
-                  <ion-icon name="eye-outline" class="show-pwd"></ion-icon>
-                  <ion-icon name="eye-off-outline" class="hide-pwd"></ion-icon>
+            <div class="modern-form-container">
+              <div class="heading">Đăng Nhập</div>
+              <form action="#" class="form">
+                <input required class="input" type="email" name="email" id="email" placeholder="Email">
+                <input required class="input" type="password" name="password" id="password" placeholder="Mật khẩu">
+                <span class="forgot-password"><a href="#">Quên mật khẩu?</a></span>
+                <input class="login-button" type="submit" value="Đăng Nhập">
+              </form>
+              <div class="social-account-container">
+                <span class="title">Hoặc đăng nhập với</span>
+                <div class="social-accounts">
+                  <button class="social-button google">
+                    <ion-icon name="logo-google"></ion-icon>
+                  </button>
+                  <button class="social-button apple">
+                    <ion-icon name="logo-apple"></ion-icon>
+                  </button>
+                  <button class="social-button facebook">
+                    <ion-icon name="logo-facebook"></ion-icon>
+                  </button>
                 </div>
               </div>
-
-              <div class="form-options">
-                <label class="remember-me">
-                  <input type="checkbox" />
-                  <span class="checkmark"></span>
-                  Ghi nhớ đăng nhập
-                </label>
-                <a href="#" class="forgot-password">Quên mật khẩu?</a>
-              </div>
-
-              <button type="submit" class="auth-btn">Đăng Nhập</button>
-            </form>
+              <span class="agreement"><a href="#">Điều khoản sử dụng</a></span>
+            </div>
           </div>
+    
+          <!-- Form Đăng Ký Mới -->
           <div class="auth-form" id="registerForm">
-            <div class="auth-header">
-              <h2>Tạo Tài Khoản Mới</h2>
-              <p>Đăng ký để nhận nhiều ưu đãi hấp dẫn</p>
+            <div class="modern-form-container">
+              <div class="heading">Đăng Ký</div>
+              <form action="#" class="form">
+                <input required class="input" type="text" name="fullname" id="reg-fullname" placeholder="Họ và tên">
+                <input required class="input" type="email" name="email" id="reg-email" placeholder="Email">
+                <input required class="input" type="tel" name="phone" id="reg-phone" placeholder="Số điện thoại">
+                <input required class="input" type="password" name="password" id="reg-password" placeholder="Mật khẩu">
+                <input required class="input" type="password" name="confirm-password" id="reg-confirm-password" placeholder="Xác nhận mật khẩu">
+                <div class="form-options">
+                  <label class="agreement-checkbox">
+                    <input type="checkbox" required>
+                    <span>Tôi đồng ý với <a href="#">Điều khoản</a> và <a href="#">Chính sách</a></span>
+                  </label>
+                </div>                
+                <input class="login-button" type="submit" value="Đăng Ký">
+              </form>
+              <div class="social-account-container">
+                <span class="title">Hoặc đăng ký với</span>
+                <div class="social-accounts">
+                  <button class="social-button google">
+                    <ion-icon name="logo-google"></ion-icon>
+                  </button>
+                  <button class="social-button apple">
+                    <ion-icon name="logo-apple"></ion-icon>
+                  </button>
+                  <button class="social-button facebook">
+                    <ion-icon name="logo-facebook"></ion-icon>
+                  </button>
+                </div>
+              </div>
             </div>
-
-            <div class="social-login">
-              <button class="social-btn facebook">
-                <ion-icon name="logo-facebook"></ion-icon>
-                <span>Facebook</span>
-              </button>
-              <button class="social-btn google">
-                <ion-icon name="logo-google"></ion-icon>
-                <span>Google</span>
-              </button>
-            </div>
-
-            <div class="divider">
-              <span>hoặc đăng ký với email</span>
-            </div>
-
-            <form action="#" class="auth-input-form">
-              <div class="form-group">
-                <div class="input-icon">
-                  <ion-icon name="person-outline"></ion-icon>
-                </div>
-                <input type="text" placeholder="Họ và tên" required />
-              </div>
-
-              <div class="form-group">
-                <div class="input-icon">
-                  <ion-icon name="mail-outline"></ion-icon>
-                </div>
-                <input type="email" placeholder="Email" required />
-              </div>
-
-              <div class="form-group">
-                <div class="input-icon">
-                  <ion-icon name="call-outline"></ion-icon>
-                </div>
-                <input type="tel" placeholder="Số điện thoại" required />
-              </div>
-
-              <div class="form-group">
-                <div class="input-icon">
-                  <ion-icon name="lock-closed-outline"></ion-icon>
-                </div>
-                <input type="password" placeholder="Mật khẩu" required />
-                <div class="toggle-password">
-                  <ion-icon name="eye-outline" class="show-pwd"></ion-icon>
-                  <ion-icon name="eye-off-outline" class="hide-pwd"></ion-icon>
-                </div>
-              </div>
-
-              <div class="form-group">
-                <div class="input-icon">
-                  <ion-icon name="lock-closed-outline"></ion-icon>
-                </div>
-                <input
-                  type="password"
-                  placeholder="Xác nhận mật khẩu"
-                  required
-                />
-              </div>
-
-              <div class="form-options">
-                <label class="remember-me">
-                  <input type="checkbox" required />
-                  <span class="checkmark"></span>
-                  Tôi đồng ý với <a href="#">Điều khoản</a> và
-                  <a href="#">Chính sách</a>
-                </label>
-              </div>
-
-              <button type="submit" class="auth-btn">Đăng Ký</button>
-            </form>
           </div>
         </div>
       </div>
     </div>
+    
     <div class="cart-modal" id="cartModal">
       <div class="cart-container">
         <div class="cart-header">
@@ -416,6 +351,7 @@
           </div>
         </div>
       </div>
+      
 
       <div class="header-main">
         <div class="container">
